@@ -1,2 +1,0 @@
-# finaljs
- proyevto js

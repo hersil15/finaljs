@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+<body>
+    <main class="register-container">
+        <header>
+            <h1>Sistema de Login y Registro</h1>
+            <h2>Registrarse</h2>
+        </header>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" placeholder="Ingresa tu nombre de usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirmar contraseña:</label>
+                <input type="password" id="confirmPassword" placeholder="Confirma tu contraseña" required>
+            </div>
+            <div class="form-group">
+                <label for="userType">Tipo de usuario:</label>
+                <select id="userType">
+                    <option value="user">Usuario</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+            <input type="submit" value="Registrarse">
+        </form>
+        <div class="links">
+            <a href="login.html">¿Ya tienes una cuenta? Ingresa aquí</a>
+            <a href="#" id="recoverAccessLink">¿Olvidaste tu usuario o contraseña? Recuperar acceso</a>
+        </div>
+        <form id="recoverForm" style="display: none;">
+            <div class="form-group">
+                <label for="recoverEmail">Correo electrónico registrado:</label>
+                <input type="email" id="recoverEmail" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            <input type="submit" value="Recuperar Acceso">
+        </form>
+        <button id="toggleDarkMode">Cambiar de modo</button>
+    </main>
+    <script src="./JS/index.js"></script>
+</body>
+</html>
