@@ -1,56 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrarse</title>
-    <link rel="stylesheet" href="./CSS/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Login y Registro</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/dark.css">
 </head>
-<body>
-    <main class="register-container">
-        <header>
-            <h1>Sistema de Login y Registro</h1>
-            <h2>Registrarse</h2>
-        </header>
-        <form id="registerForm">
-            <div class="form-group">
-                <label for="username">Nombre de usuario:</label>
-                <input type="text" id="username" placeholder="Ingresa tu nombre de usuario" required>
+<body class="bg-blue-400 flex items-center justify-center min-h-screen text-black">
+  <main class="bg-blue-900 text-black p-8 rounded-lg shadow-lg max-w-md w-full">
+    <header class="mb-6 text-center">
+      <h1 class="text-3xl font-bold">Sistema de Login y Registro.</h1>
+      <h2 class="text-2xl mt-4">Registrarse</h2>
+      </header>
+      <form id="registerForm" class="space-y-5 border border-black-900 p-4 rounded-lg">
+        <div class="form-group">
+          <label for="username" class="block text-white">Nombre de usuario:</label>
+          <input type="text" id="username" placeholder="Ingresa tu nombre de usuario" class="w-full p-2 border border-red-500 rounded text-black" required>
             </div>
             <div class="form-group">
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+              <label for="email" class="block text-white">Correo electrónico:</label>
+              <input type="email" id="email" placeholder="Ingresa tu correo electrónico" class="w-full p-2 border border-red-500 rounded text-black" required>
             </div>
             <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+              <label for="password" class="block text-white">Contraseña:</label>
+              <input type="password" id="password" placeholder="Ingresa tu contraseña" class="w-full p-2 border border-red-500 rounded text-black" required>
             </div>
             <div class="form-group">
-                <label for="confirmPassword">Confirmar contraseña:</label>
-                <input type="password" id="confirmPassword" placeholder="Confirma tu contraseña" required>
+              <label for="confirmPassword" class="block text-white">Confirmar contraseña:</label>
+              <input type="password" id="confirmPassword" placeholder="Confirma tu contraseña" class="w-full p-2 border border-red-500 rounded text-black" required>
             </div>
-            <div class="form-group">
-                <label for="userType">Tipo de usuario:</label>
-                <select id="userType">
-                    <option value="user">Usuario</option>
-                    <option value="admin">Administrador</option>
-                </select>
-            </div>
-            <input type="submit" value="Registrarse">
-        </form>
-        <div class="links">
-            <a href="login.html">¿Ya tienes una cuenta? Ingresa aquí</a>
-            <a href="#" id="recoverAccessLink">¿Olvidaste tu usuario o contraseña? Recuperar acceso</a>
+            <input type="submit" value="Registrarse" class="w-full bg-orange-600 text-black p-2 rounded hover:bg-orange-500 cursor-pointer">
+      </form>
+        <div class="links text-center mt-4">
+            <a href="login.html" class="block text-red-500">¿Ya estás registrado? Ingresa aquí</a>
         </div>
-        <form id="recoverForm" style="display: none;">
-            <div class="form-group">
-                <label for="recoverEmail">Correo electrónico registrado:</label>
-                <input type="email" id="recoverEmail" placeholder="Ingresa tu correo electrónico" required>
-            </div>
-            <input type="submit" value="Recuperar Acceso">
-        </form>
-        <button id="toggleDarkMode">Cambiar de modo</button>
+        <button id="toggleDarkMode" class="w-full mt-4 bg-orange-600 text-white p-2 rounded hover:bg-orange-500 cursor-pointer">Cambiar de modo</button>
     </main>
-    <script src="./JS/index.js"></script>
+    <script src="./JS/dark.js"></script>
+    <script src="./JS/validar.js"></script>
 </body>
 </html>
