@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./CSS/home.css">
-</head>
-<body>
-    <main class="home-container">
-        <header>
-            <h1 id="welcomeMessage"></h1>
-        </header>
-        <div class="content">
-            <h2>Home</h2>
-            <button id="logoutButton">Cerrar Sesión</button>
-        </div>
-        <button id="toggleDarkMode">Cambiar a modo oscuro</button>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/dark.css">
+  </head>
+  <body class="bg-blue-300 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6">
+    <header class="mb-6 text-center">
+      <h1 class="text-3xl font-bold text-white">¡Bienvenido, usuario!</h1>
+    </header>
+    <main class="flex flex-col items-center justify-center flex-grow">
+      <div class="bg-blue-900 text-black p-8 rounded-lg shadow-lg w-full max-w-md text-center">
+        <h2 class="text-2xl font-bold">Home</h2>
+      </div>
+      <a href="index.html" class="block mt-4 text-red-500">Logout</a>
+      <a href="perfil.html" class="block mt-4 text-blue-500 underline hover:text-blue-700">Editar Perfil</a>
+      <button id="toggleDarkMode" class="mt-4 bg-orange-600 text-white p-2 rounded hover:bg-orange-500 cursor-pointer">Cambiar de modo</button>
     </main>
+    <script src="./JS/dark.js"></script>
+    <script src="./JS/validar.js"></script>
     <script src="./JS/home.js"></script>
-</body>
+  </body>
 </html>

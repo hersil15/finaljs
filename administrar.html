@@ -1,36 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrar Usuarios</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/dark.css">
 </head>
-<body>
-    <header>
-        <h1>Administrar Usuarios</h1>
-    </header>
-    <main>
-        <section class="form-section">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Usuario</th>
-                        <th>Email</th>
-                        <th>Tipo</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="usersTable">
-                    <!-- Usuarios serán listados aquí -->
-                </tbody>
-            </table>
-            <div class="links">
-                <p><a href="home.html">Volver a Home</a></p>
-            </div>
-        </section>
-    </main>
-    <button id="toggleDarkMode">Cambiar Modo</button>
+<body class="bg-blue-200 flex items-center justify-center min-h-screen">
+  <div class="bg-blue-400 border-2 border-black p-6">
+    <h1 class="text-center text-2xl font-bold mb-4">Administrar</h1>
+    <div class="grid grid-cols-4 gap-4 mb-4">
+      <div class="col-span-1">Usuario</div>
+      <div class="col-span-1">Email</div>
+      <div class="col-span-1">Contraseña</div>
+      <div class="col-span-1">Modificar</div>
+    </div>
+    <button id="toggleDarkMode" class="w-full mt-4 bg-orange-600 text-black p-2 rounded hover:bg-orange-500 cursor-pointer">Cambiar de modo</button>
+    <a href="./index.html" class="block text-center mt-4 text-blue-">Salir de la página</a>
+  </div>
     <script src="./JS/administrar.js"></script>
+    <script src="./JS/dark.js"></script>
 </body>
 </html>

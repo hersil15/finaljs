@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
-    <link rel="stylesheet" href="./CSS/perfil.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfil</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/dark.css">
 </head>
-<body>
-    <main class="profile-container">
-        <header>
-            <h1>Perfil de Usuario</h1>
-        </header>
-        <form id="profileForm">
-            <div class="form-group">
-                <label for="username">Nombre de usuario:</label>
-                <input type="text" id="username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirmar contraseña:</label>
-                <input type="password" id="confirmPassword" required>
-            </div>
-            <input type="submit" value="Guardar Cambios">
-        </form>
-        <button id="toggleDarkMode">Cambiar a modo oscuro</button>
-    </main>
-    <script src="./JS/perfil.js"></script>
+<body class="bg-blue-300 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6">
+  <div class="bg-blue-900 text-black p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h1 class="text-3xl font-bold mb-6 text-center">Editar Perfil</h1>
+    <form>
+      <label class="block mb-4">
+        <span class="block font-bold mb-2">Usuario:</span>
+        <input type="text" class="form-input mt-1 block w-full" placeholder="Usuario" />
+      </label>
+      <label class="block mb-4">
+        <span class="block font-bold mb-2">Correo Electrónico:</span>
+        <input type="email" class="form-input mt-1 block w-full" placeholder="ejemplo@example.com" />
+      </label>
+      <label class="block mb-4">
+        <span class="block font-bold mb-2">Contraseña:</span>
+        <input type="password" class="form-input mt-1 block w-full" placeholder="••••••••" />
+      </label>
+      <div class="flex justify-between items-center mt-6">
+        <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-400">Guardar Cambios</button>
+        <button type="button" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-400">Eliminar Perfil</button>
+      </div>
+    </form>
+    <div class="flex justify-center mt-4">
+      <button id="toggleDarkMode" class="bg-orange-600 text-white p-2 rounded hover:bg-orange-500 cursor-pointer">Cambiar de modo</button>
+    </div>
+     <div class="flex justify-center mt-4">
+      <a href="home.html" class="text-blue-500 underline hover:text-blue-700">Salir a Home</a>
+    </div>
+  </div>
+  <script src="./JS/dark.js"></script>
+  <script src="./JS/perfil.js"></script>
 </body>
 </html>

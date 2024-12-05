@@ -1,12 +1,12 @@
 /* Tailwind custom styles for dark mode */
 .dark-mode {
   background-color: #121212;
-  color: #ffffff;
+  color: #2b2a2a;
 }
 
 .dark-mode .bg-blue-900 {
   background-color: #333 !important;
-  color: #ffffff;
+  color: #6b6666;
 }
 
 .dark-mode .bg-orange-600 {
